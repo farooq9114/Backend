@@ -20,7 +20,7 @@ import com.perfume.PerfumeCollection.Model.Cart;
 import com.perfume.PerfumeCollection.Repository.CartRepo;
 import com.perfume.PerfumeCollection.Service.CartService;
 
-@CrossOrigin(origins = "http://192.168.1.32:4200")
+@CrossOrigin(origins = "http://192.168.1.21:4200")
 @RestController
 @RequestMapping("/cart")
 public class CartController {
@@ -33,7 +33,6 @@ public class CartController {
 
 	 @PostMapping("/addToCart")
 	    public ResponseEntity<Map<String, String>> addToCart(@RequestBody Cart cart) {
-		 System.out.println("Received in backend: " + cart); 
 	        cartService.addToCart(cart);
 
 	        Map<String, String> response = new HashMap<>();

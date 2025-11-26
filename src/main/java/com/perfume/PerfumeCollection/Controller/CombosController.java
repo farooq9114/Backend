@@ -15,7 +15,7 @@ import com.perfume.PerfumeCollection.Service.ComboService;
 
 @RestController
 @RequestMapping("/combos")
-@CrossOrigin(origins = "http://192.168.1.32:4200")
+@CrossOrigin(origins = "http://192.168.1.21:4200")
 public class CombosController {
 
 	@Autowired

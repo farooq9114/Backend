@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.perfume.PerfumeCollection.Model.User;
 import com.perfume.PerfumeCollection.Service.UserService;
 
-@CrossOrigin(origins = "http://192.168.1.32:4200")
+@CrossOrigin(origins = "http://192.168.1.21:4200")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -29,7 +29,6 @@ public class UserController {
 	    User existingUser = userService.findByEmail(user.getEmail().toLowerCase());
 
 	    if (existingUser!= null) {
-	        System.out.println("User already exists");
 	        return ResponseEntity.status(HttpStatus.CONFLICT)
 	                .body(Map.of("message", "Email already exists"));
 	    }
