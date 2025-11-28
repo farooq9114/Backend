@@ -12,6 +12,11 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.env
+*.env
+
+# Ignore application.properties file
+src/main/resources/application.properties
 
 ### IntelliJ IDEA ###
 .idea
