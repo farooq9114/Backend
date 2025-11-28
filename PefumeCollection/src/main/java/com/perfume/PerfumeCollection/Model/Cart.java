@@ -18,10 +18,11 @@ public class Cart {
     private double price;
     private String imageurl;
     private int quantity;
+    private String producttype;
     
     public Cart() {}
     
-    public Cart(int uid, int pid, String name, String description, String gender, double price, String imageurl, int quantity) {
+    public Cart(int uid, int pid, String name, String description, String gender, double price, String imageurl, int quantity, String producttype) {
 		super();
 		this.uid = uid;
 		this.pid = pid;
@@ -31,6 +32,7 @@ public class Cart {
 		this.price = price;
 		this.imageurl = imageurl;
 		this.quantity = quantity;
+		this.producttype = producttype;
 	}
     
 	// Getters and Setters
@@ -60,6 +62,14 @@ public class Cart {
 
 	public int getQuantity() { return quantity; }
 	public void setQuantity(int quantity) { this.quantity = quantity; }
+
+	public String getProducttype() {
+		return producttype;
+	}
+
+	public void setProducttype(String producttype) {
+		this.producttype = producttype;
+	}
     
     
 }

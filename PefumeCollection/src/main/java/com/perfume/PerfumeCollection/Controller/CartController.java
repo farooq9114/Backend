@@ -20,22 +20,19 @@ import com.perfume.PerfumeCollection.Model.Cart;
 import com.perfume.PerfumeCollection.Repository.CartRepo;
 import com.perfume.PerfumeCollection.Service.CartService;
 
-@CrossOrigin(origins = "http://192.168.1.31:4200")
+@CrossOrigin(origins = "http://192.168.1.21:4200")
 @RestController
 @RequestMapping("/cart")
 public class CartController {
 	
 	@Autowired
-	
-	
 	private CartService cartService;
 	
 	@Autowired
 	private CartRepo cartRepo;
-	
+
 	 @PostMapping("/addToCart")
 	    public ResponseEntity<Map<String, String>> addToCart(@RequestBody Cart cart) {
-		 System.out.println("Received in backend: " + cart); 
 	        cartService.addToCart(cart);
 
 	        Map<String, String> response = new HashMap<>();
@@ -63,6 +60,11 @@ public class CartController {
 	     response.put("message", "Item deleted successfully!");
 	     return ResponseEntity.ok(response);
 	 }
-
 	 
+	 @DeleteMapping("/clear/{uid}")
+	   public ResponseEntity<String> clearCart(@PathVariable  int uid){
+		 List<Cart> items = cartRepo.findByUid(uid);
+	 	   cartRepo.deleteAll(items);
+		   return ResponseEntity.ok("Cart cleared successfully");
+	   }	 
 }

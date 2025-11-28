@@ -15,7 +15,7 @@ import com.perfume.PerfumeCollection.Model.User;
 import com.perfume.PerfumeCollection.Service.PerfumeService;
 import com.perfume.PerfumeCollection.Service.UserService;
 
-@CrossOrigin(origins = "http://192.168.1.31:4200")
+@CrossOrigin(origins = "http://192.168.1.21:4200")
 @RestController
 @RequestMapping("/admin")
 public class AdminController {

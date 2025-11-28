@@ -30,6 +30,7 @@ public class PerfumeService {
 		return perfumeRepo.findByNameContainingIgnoreCase(pName);
 	}
 	
+	//fetch perfume's name
 	public List<Perfume> getPerfumeName(String name){
 		return perfumeRepo.findByNameContainingIgnoreCase(name);
 	}

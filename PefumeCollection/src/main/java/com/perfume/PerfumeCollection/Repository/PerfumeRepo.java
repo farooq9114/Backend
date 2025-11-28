@@ -13,8 +13,5 @@ public interface PerfumeRepo extends JpaRepository<Perfume, Integer>{
 	List<Perfume> findByGenderIgnoreCase(String gender);
 	
 	List<Perfume> findByNameContainingIgnoreCase(String name);
-	
-	
-	
-	
+		
 }
