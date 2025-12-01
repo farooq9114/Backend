@@ -20,7 +20,7 @@ import com.perfume.PerfumeCollection.Model.Cart;
 import com.perfume.PerfumeCollection.Repository.CartRepo;
 import com.perfume.PerfumeCollection.Service.CartService;
 
-@CrossOrigin(origins = "http://192.168.1.21:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/cart")
 public class CartController {

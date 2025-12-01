@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.perfume.PerfumeCollection.Model.Perfume;
 import com.perfume.PerfumeCollection.Repository.PerfumeRepo;
 import com.perfume.PerfumeCollection.Service.PerfumeService;
-@CrossOrigin(origins = "http://192.168.1.21:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/perfume")
 public class PerfumeController {
